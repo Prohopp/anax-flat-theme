@@ -4,12 +4,46 @@
 @import url(modules.less);
 
 
+
+/** --------------------------------------------------------------
+ *  General
+ */
+
+@light-blue: lightblue;
+
+body {
+    padding-top: 20px;
+}
+
+.breadcrumb-list {
+    a {
+        color: inherit;
+    }
+}
+
+ul,
+li {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
 /** --------------------------------------------------------------
  *  Header
  */
+
 .site-header {
     height: 80px;
 }
+
+.outer-wrap-flash {
+    img {
+        width: 950px;
+        height: 230px;
+    }
+}
+
 
 .site-logo-text,
 .navbar2,
@@ -28,11 +62,14 @@
 }
 
 //navbar main
-.rm-desktop li {
-    //background-color: #eee;
-}
+.rm-desktop {
+    width: 400px;
 
-@navbarItemBgColor: #eee;
+    li {
+        //background-color: #eee;
+    }
+}
+@navbarItemBgColor: @light-blue;
 
 //navbar maxcdn
 .rm-max .rm-small .rm-button {
@@ -40,6 +77,34 @@
 }
 
 @maxButtonFontSize: 2em;
+
+.content {
+    padding: 5px;
+}
+
+// Byline
+
+.byline {
+    margin-left: 34%;
+}
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+
+.footer {
+    background-color: @light-blue;
+    padding-left: 100px;
+}
+
+.footer-column-x {
+    margin-left: 20px;
+}
+
+.footer-column-1,
+.footer-column-2 {
+    border-right: 1px solid white;
+}
 
 /** --------------------------------------------------------------
  *  Logo images
@@ -84,6 +149,10 @@
 @media screen and (max-width: 700px) {
     .footer-column {
         width: 100%;
+    }
+
+    .byline {
+        margin-left: 0%;
     }
 }
 
